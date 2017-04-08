@@ -9,6 +9,7 @@ import javax.swing.JPanel;
 
 @SuppressWarnings("serial")
 public class UserProfilePanel extends CustomPanel{
+	
 	private final Action action = new SwingAction();
 	private JFrame frame;
 	
