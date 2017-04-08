@@ -5,6 +5,7 @@ import javax.swing.JPanel;
 
 public class CustomPanel extends JPanel{
 
+	private static final long serialVersionUID = -2759107326913383028L;
 	private JFrame frmHealthyStart;
 	
 	
@@ -17,7 +18,7 @@ public class CustomPanel extends JPanel{
 	}
 	
 	public JFrame getFrame() {
-		return frmHealthyStart;
+		return this.frmHealthyStart;
 	}
 	
 	// Change GUI to new desired page

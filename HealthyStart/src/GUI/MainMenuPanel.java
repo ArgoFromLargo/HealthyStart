@@ -12,14 +12,17 @@ import javax.swing.JPanel;
 
 public class MainMenuPanel extends CustomPanel{
 	
+	private static final long serialVersionUID = -4397847224806674293L;
 	private final Action action = new SwingAction();
 	private final Action action_1 = new SwingAction_1();
 	private final Action action_2 = new SwingAction_2();
 	private final Action action_3 = new SwingAction_3();
+	private JFrame mainWindow;
 
 	
 	public MainMenuPanel(JFrame frame) {
 		super(frame);
+		this.mainWindow = frame;
 		
 		JButton btnNewButton = new JButton("View Appointment Info");
 		btnNewButton.setAction(action);
@@ -48,10 +51,6 @@ public class MainMenuPanel extends CustomPanel{
 
 	}
 	
-	public JPanel getJPanel() {
-		return this;
-	}
-	
 	// ActionEvent for View Appointment Info button
 	private class SwingAction extends AbstractAction {
 		private static final long serialVersionUID = -5705307890460578789L;
@@ -60,7 +59,7 @@ public class MainMenuPanel extends CustomPanel{
 			putValue(SHORT_DESCRIPTION, "Some short description");
 		}
 		public void actionPerformed(ActionEvent e) {
-			changePanel(new JPanel());
+			changePanel(new ViewAppInfoPanel(mainWindow));
 		}
 	}
 	
