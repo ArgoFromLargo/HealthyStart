@@ -14,6 +14,6 @@ import javax.swing.SwingConstants;
 import java.awt.Font;
 import java.awt.Color;
 
-public class LoginHandler{
+public class LoginHandler extends JFrame{
 	
 }
