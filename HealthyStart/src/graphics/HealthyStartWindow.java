@@ -1,3 +1,4 @@
+package graphics;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -47,7 +48,7 @@ public class HealthyStartWindow {
 		
 		JLabel HealthyStartLogo = new JLabel("");
 		HealthyStartLogo.setHorizontalAlignment(SwingConstants.CENTER);
-		HealthyStartLogo.setIcon(new ImageIcon("/Users/lkledzik/Documents/workspace/HealthyStart/src/HealthyStartLogo.png"));
+		HealthyStartLogo.setIcon(new ImageIcon("src/graphics/images/HealthyStartLogo.png"));
 		frmHealthyStart.getContentPane().add(HealthyStartLogo, BorderLayout.CENTER);
 	}
 
