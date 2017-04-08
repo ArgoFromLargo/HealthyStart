@@ -71,7 +71,7 @@ public class MainMenuPanel extends CustomPanel{
 			putValue(SHORT_DESCRIPTION, "Some short description");
 		}
 		public void actionPerformed(ActionEvent e) {
-			changePanel(new JPanel());
+			changePanel(new UserProfilePanel(mainWindow));
 		}
 	}
 	
