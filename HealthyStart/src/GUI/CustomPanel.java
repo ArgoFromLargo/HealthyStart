@@ -3,9 +3,9 @@ package gui;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+@SuppressWarnings("serial")
 public class CustomPanel extends JPanel{
 
-	private static final long serialVersionUID = -2759107326913383028L;
 	private JFrame frmHealthyStart;
 	
 	
