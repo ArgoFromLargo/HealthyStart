@@ -24,9 +24,9 @@ public class EducationPanel extends CustomPanel{
 		this.add(btnNewButton);
 		
 		JButton btnNewButton2 = new JButton("Backs");
-		btnNewButton.setAction(action_2);
-		btnNewButton.setBounds(63, 244, 213, 29);
-		this.add(btnNewButton);
+		btnNewButton2.setAction(action_2);
+		btnNewButton2.setBounds(63, 244, 213, 29);
+		this.add(btnNewButton2);
 	}
 	
 	// ActionEvent for Returning to Main Menu
