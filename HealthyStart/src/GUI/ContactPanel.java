@@ -9,12 +9,28 @@ import javax.swing.JPanel;
 
 @SuppressWarnings("serial")
 public class ContactPanel extends CustomPanel{
+	
+	private final Action action = new SwingAction();
 	private JFrame frame;
 	
 	public ContactPanel(JFrame frame){
 		super(frame);
 		this.frame = frame;
-		
+		JButton btnNewButton = new JButton("Return to Main Menu");
+		btnNewButton.setAction(action);
+		btnNewButton.setBounds(33, 214, 213, 29);
+		this.add(btnNewButton);
 	}
 	
+	// ActionEvent for Returning to Main Menu
+	@SuppressWarnings("serial")
+	private class SwingAction extends AbstractAction {
+		public SwingAction() {
+			putValue(NAME, "Return to Main Menu");
+			putValue(SHORT_DESCRIPTION, "Some short description");
+		}
+		public void actionPerformed(ActionEvent e) {
+			changePanel(new MainMenuPanel(frame));
+		}
+	}
 }
