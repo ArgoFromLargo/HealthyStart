@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 public class Tips {
 	
 	static String fileName = "tips.txt";
@@ -48,18 +51,19 @@ public class Tips {
 			System.out.println(randomLine);
 		}*/
 		
-		int max = temp.size();
+		int max = temp.size(); 
 		Random random = new Random();
 		int randomNum;
 		randomNum = random.nextInt(max)+1;
 		String randomLine = temp.get(randomNum);
 		//System.out.println("RanLine[" +randomNum+"] = "+ randomLine);
-		System.out.println(randomLine);
+		//System.out.println(randomLine);
+		JOptionPane.showMessageDialog(new JFrame(), randomLine);
 	}
 	
-	public static void main(String[] args){
+	/*public static void main(String[] args){
 		
 		RandomAdvice();
-	}
+	}*/
 
 }

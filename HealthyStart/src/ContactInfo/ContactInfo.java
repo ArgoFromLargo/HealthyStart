@@ -42,12 +42,12 @@ public class ContactInfo {
 		
 	}
 	
-	public static void main(String[] args){
+	/*public static void main(String[] args){
 		System.out.println("Coordinator Contact:\n");
 		getCoordinatorInfo(coordinatorInfo);
 		//getSupportServices(supportServices);//can pass in a string of service name to private that specific one;
 		System.out.println("\nHospital Information:\n");
 		getHospitalInfo(hospitalInfo);
-	}
+	}*/
 
 }
