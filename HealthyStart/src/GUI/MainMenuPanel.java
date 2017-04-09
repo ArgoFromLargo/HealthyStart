@@ -8,7 +8,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
 
 @SuppressWarnings("serial")
 public class MainMenuPanel extends CustomPanel{
@@ -45,7 +44,7 @@ public class MainMenuPanel extends CustomPanel{
 		this.add(btnNewButton_3);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setBounds(6, 6, 562, 172);
+		lblNewLabel.setBounds(100, 6, 562, 172);
 		this.add(lblNewLabel);
 		lblNewLabel.setIcon(new ImageIcon(HealthyStartWindow.class.getResource("/gui/images/HealthyStartLogo.png")));
 

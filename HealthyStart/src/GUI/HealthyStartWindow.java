@@ -2,14 +2,7 @@ package gui;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.ImageIcon;
 import java.awt.Color;
-import javax.swing.JButton;
-import javax.swing.AbstractAction;
-import java.awt.event.ActionEvent;
-import javax.swing.Action;
-import javax.swing.JPanel;
 
 public class HealthyStartWindow {
 
@@ -40,7 +33,8 @@ public class HealthyStartWindow {
 		initialize();
 		// 
 		this.PM = new CustomPanel(frmHealthyStart);
-		this.PM.changePanel(new MainMenuPanel(frmHealthyStart));
+		this.PM.changePanel(new LoginPanel(frmHealthyStart));
+		// this.PM.changePanel(new MainMenuPanel(frmHealthyStart));
 	}
 
 	/**

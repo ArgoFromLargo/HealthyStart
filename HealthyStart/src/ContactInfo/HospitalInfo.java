@@ -1,3 +1,4 @@
+package ContactInfo;
 
 public class HospitalInfo {
 	private String hospitalName;
