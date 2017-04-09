@@ -28,13 +28,13 @@ public class Tips {
 		
 	}
 	
-	public static void main(String[] args){
+	public static void RandomAdvice(){
 		List<String> temp = new ArrayList<String>();
 		temp = readFile(fileName);
 		
-		for(int i=0; i<temp.size(); i++){
+		/*for(int i=0; i<temp.size(); i++){
 			String line= temp.get(i);
-			System.out.println("Line[i] = " + line + "\n");
+			System.out.println(line + "\n");
 		}
 		
 		int max = temp.size();
@@ -44,9 +44,22 @@ public class Tips {
 		for(int j=0; j<max; j++){
 			randomNum = random.nextInt(max)+1;
 			String randomLine = temp.get(randomNum);
-			System.out.println("RanLine[" +randomNum+"] = "+ randomLine);
-		}
+			//System.out.println("RanLine[" +randomNum+"] = "+ randomLine);
+			System.out.println(randomLine);
+		}*/
 		
+		int max = temp.size();
+		Random random = new Random();
+		int randomNum;
+		randomNum = random.nextInt(max)+1;
+		String randomLine = temp.get(randomNum);
+		//System.out.println("RanLine[" +randomNum+"] = "+ randomLine);
+		System.out.println(randomLine);
+	}
+	
+	public static void main(String[] args){
+		
+		RandomAdvice();
 	}
 
 }
