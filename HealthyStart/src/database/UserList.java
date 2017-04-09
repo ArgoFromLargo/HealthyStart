@@ -1,3 +1,5 @@
+package database;
+
 import java.util.*;
 
 public class UserList{
@@ -8,7 +10,7 @@ public class UserList{
     {
         this.users = new ArrayList<User>();
     }
-    public List getUsers(){return this.users;}
+    public List<User> getUsers(){return this.users;}
     public void setUsers(List<User> users)
     {
 

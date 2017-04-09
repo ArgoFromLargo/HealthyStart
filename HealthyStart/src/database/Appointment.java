@@ -1,8 +1,7 @@
 /**
  * Created by jayz2053 on 4/8/17.
  */
-import java.util.*;
-
+package database;
 
 public class Appointment
 {

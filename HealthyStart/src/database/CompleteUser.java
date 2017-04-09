@@ -1,11 +1,9 @@
 /**
  * Created by jayz2053 on 4/9/17.
  */
-
+package database;
 
 import java.util.*;
-import java.beans.*;
-import java.io.*;
 public class CompleteUser {
 
     private Database testDb = new Database();
