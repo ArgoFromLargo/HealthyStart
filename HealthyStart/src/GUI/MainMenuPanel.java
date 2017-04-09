@@ -55,7 +55,6 @@ public class MainMenuPanel extends CustomPanel{
 		private static final long serialVersionUID = -5705307890460578789L;
 		public SwingAction() {
 			putValue(NAME, "View Appointment Info");
-			putValue(SHORT_DESCRIPTION, "Some short description");
 		}
 		public void actionPerformed(ActionEvent e) {
 			changePanel(new ViewAppInfoPanel(mainWindow));
@@ -67,7 +66,6 @@ public class MainMenuPanel extends CustomPanel{
 		private static final long serialVersionUID = 3952694087855581876L;
 		public SwingAction_1() {
 			putValue(NAME, "User Profile");
-			putValue(SHORT_DESCRIPTION, "Some short description");
 		}
 		public void actionPerformed(ActionEvent e) {
 			changePanel(new UserProfilePanel(mainWindow));
@@ -79,7 +77,6 @@ public class MainMenuPanel extends CustomPanel{
 		private static final long serialVersionUID = 5581455170518144160L;
 		public SwingAction_2() {
 			putValue(NAME, "Resources and Information");
-			putValue(SHORT_DESCRIPTION, "Some short description");
 		}
 		public void actionPerformed(ActionEvent e) {
 			changePanel(new ResourcePanel(mainWindow));
@@ -91,7 +88,6 @@ public class MainMenuPanel extends CustomPanel{
 		private static final long serialVersionUID = -5115678276589030594L;
 		public SwingAction_3() {
 			putValue(NAME, "Helpful Contacts");
-			putValue(SHORT_DESCRIPTION, "Some short description");
 		}
 		public void actionPerformed(ActionEvent e) {
 			changePanel(new ContactPanel(mainWindow));

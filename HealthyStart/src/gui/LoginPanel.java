@@ -47,7 +47,6 @@ public class LoginPanel extends CustomPanel {
 	private class SwingAction extends AbstractAction {
 		public SwingAction() {
 			putValue(NAME, "Submit email address");
-			putValue(SHORT_DESCRIPTION, "Some short description");
 		}
 		public void actionPerformed(ActionEvent e) {
 			email = txtEnterEmailHere.getText();

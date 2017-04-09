@@ -50,7 +50,6 @@ public class ResourcePanel extends CustomPanel{
 	private class SwingAction extends AbstractAction {
 		public SwingAction() {
 			putValue(NAME, "Return to Main Menu");
-			putValue(SHORT_DESCRIPTION, "Some short description");
 		}
 		public void actionPerformed(ActionEvent e) {
 			changePanel(new MainMenuPanel(frame));
@@ -61,7 +60,6 @@ public class ResourcePanel extends CustomPanel{
 	private class SwingAction_1 extends AbstractAction {
 		public SwingAction_1() {
 			putValue(NAME, "Links");
-			putValue(SHORT_DESCRIPTION, "Some short description");
 		}
 		public void actionPerformed(ActionEvent e) {
 			changePanel(new LinksPanel(frame));
@@ -72,7 +70,6 @@ public class ResourcePanel extends CustomPanel{
 	private class SwingAction_2 extends AbstractAction {
 		public SwingAction_2() {
 			putValue(NAME, "Purchases");
-			putValue(SHORT_DESCRIPTION, "Some short description");
 		}
 		public void actionPerformed(ActionEvent e) {
 			changePanel(new PurchasesPanel(frame));
@@ -83,7 +80,6 @@ public class ResourcePanel extends CustomPanel{
 	private class SwingAction_3 extends AbstractAction {
 		public SwingAction_3() {
 			putValue(NAME, "Educational");
-			putValue(SHORT_DESCRIPTION, "Some short description");
 		}
 		public void actionPerformed(ActionEvent e) {
 			changePanel(new EducationPanel(frame));

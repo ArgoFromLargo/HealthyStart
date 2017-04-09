@@ -32,7 +32,6 @@ public class ViewAppInfoPanel extends CustomPanel{
 	private class SwingAction extends AbstractAction {
 		public SwingAction() {
 			putValue(NAME, "Return to Main Menu");
-			putValue(SHORT_DESCRIPTION, "Some short description");
 		}
 		public void actionPerformed(ActionEvent e) {
 			changePanel(new MainMenuPanel(frame));

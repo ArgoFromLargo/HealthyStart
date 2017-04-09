@@ -39,7 +39,6 @@ public class LinksPanel extends CustomPanel{
 	private class SwingAction extends AbstractAction {
 		public SwingAction() {
 			putValue(NAME, "Return to Main Menu");
-			putValue(SHORT_DESCRIPTION, "Some short description");
 		}
 		public void actionPerformed(ActionEvent e) {
 			changePanel(new MainMenuPanel(frame));
@@ -50,7 +49,6 @@ public class LinksPanel extends CustomPanel{
 	private class SwingAction2 extends AbstractAction {
 		public SwingAction2() {
 			putValue(NAME, "Back");
-			putValue(SHORT_DESCRIPTION, "Some short description");
 		}
 		public void actionPerformed(ActionEvent e) {
 			changePanel(new ResourcePanel(frame));
