@@ -1,4 +1,3 @@
-package ContactInfo;
 
 public class CoordinatorInfo {
 	

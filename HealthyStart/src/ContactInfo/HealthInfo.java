@@ -1,5 +1,3 @@
-package ContactInfo;
-
 import java.util.ArrayList;
 import java.util.List;
 
