@@ -46,7 +46,6 @@ public class ResourcePanel extends CustomPanel{
 		lblNewLabel.setIcon(new ImageIcon(HealthyStartWindow.class.getResource("/gui/images/HealthyStartLogo.png")));
 	}
 	
-	// ActionEvent for Returning to Main Menu
 	private class SwingAction extends AbstractAction {
 		public SwingAction() {
 			putValue(NAME, "Return to Main Menu");
@@ -56,7 +55,6 @@ public class ResourcePanel extends CustomPanel{
 		}
 	}
 	
-	// ActionEvent for User Profile button
 	private class SwingAction_1 extends AbstractAction {
 		public SwingAction_1() {
 			putValue(NAME, "Links");
@@ -66,7 +64,6 @@ public class ResourcePanel extends CustomPanel{
 		}
 	}
 	
-	// ActionEvent for Resources and Information button
 	private class SwingAction_2 extends AbstractAction {
 		public SwingAction_2() {
 			putValue(NAME, "Purchases");
@@ -76,7 +73,6 @@ public class ResourcePanel extends CustomPanel{
 		}
 	}
 	
-	// ActionEvent for Helpful Contacts button
 	private class SwingAction_3 extends AbstractAction {
 		public SwingAction_3() {
 			putValue(NAME, "Educational");
