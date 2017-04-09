@@ -17,6 +17,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import database.User;
+import java.awt.TextArea;
 
 @SuppressWarnings("serial")
 public class ViewAppInfoPanel extends CustomPanel{
@@ -38,6 +39,12 @@ public class ViewAppInfoPanel extends CustomPanel{
 		lblNewLabel.setBounds(100, 6, 562, 172);
 		this.add(lblNewLabel);
 		lblNewLabel.setIcon(new ImageIcon(HealthyStartWindow.class.getResource("/gui/images/HealthyStartLogo.png")));
+		
+		TextArea textArea = new TextArea();
+		
+		textArea.setText(user.printHistory());
+		textArea.setBounds(264, 214, 499, 179);
+		add(textArea);
 	}
 	
 	// ActionEvent for Returning to Main Menu
@@ -49,5 +56,4 @@ public class ViewAppInfoPanel extends CustomPanel{
 			changePanel(new MainMenuPanel(frame, user), user);
 		}
 	}
-	
 }

@@ -2,6 +2,7 @@ package gui;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 import database.CompleteUser;
@@ -58,6 +59,9 @@ public class LoginPanel extends CustomPanel {
 		public void actionPerformed(ActionEvent e) {
 			email = txtEnterEmailHere.getText();
 			this.compUser = new CompleteUser(email);
+			if(compUser.getFinalProduct() == null) {
+				return;
+			}
 			this.user = compUser.getFinalProduct();
 			changePanel(new MainMenuPanel(mainWindow, user), user);
 		}

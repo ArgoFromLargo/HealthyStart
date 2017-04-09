@@ -4,6 +4,9 @@
 package database;
 
 import java.util.*;
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 public class CompleteUser {
 
     private Database testDb = new Database();
@@ -15,14 +18,16 @@ public class CompleteUser {
     {
         testDb = new Database();
         testAptDb = new AptDatabase();
-
-        tempUser = testDb.LookupUser(email);
-        tempList = testAptDb.LookupAppointments(tempUser.getName());
-        tempUser.addAptList(tempList);
-        //tempUser.printHistory();
-
+        try {
+	        tempUser = testDb.LookupUser(email);
+	        tempList = testAptDb.LookupAppointments(tempUser.getName());
+	        tempUser.addAptList(tempList);
+        }
+        catch(Exception e) {
+        	JOptionPane.showMessageDialog(new JFrame(), "Account not found. Try again.");
+        }
     }
-
+    
     public User getFinalProduct()
     {
         return tempUser;

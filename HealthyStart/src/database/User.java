@@ -81,15 +81,16 @@ public class User
         aptList.add(apt);
     }
 
-    public void printHistory()
+    public String printHistory()
     {
-        Appointment temp;
+        String temp = "";
+        Appointment aptTemp;
         for(int i = 0; i < this.aptList.size(); i++)
         {
-            temp = this.aptList.get(i);
-            temp.printAppointment();
+            aptTemp = this.aptList.get(i);
+            temp += aptTemp.printAppointment();
         }
-
+        return temp;
     }
 
     public int getBabyScore()

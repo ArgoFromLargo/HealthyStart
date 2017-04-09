@@ -47,9 +47,9 @@ public class Appointment
         scheduled = day;
     }
 
-    public void printAppointment()
+    public String printAppointment()
     {
-        System.out.println(this.doctor + "\t" + this.scheduled +"\n" + attended+"\n");
+        return (this.doctor + "\t" + this.scheduled +"\n");
     }
 
 }
