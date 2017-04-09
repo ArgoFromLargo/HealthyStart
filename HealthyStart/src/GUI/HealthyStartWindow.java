@@ -2,6 +2,9 @@ package gui;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+
+import database.User;
+
 import java.awt.Color;
 
 public class HealthyStartWindow {
@@ -33,8 +36,7 @@ public class HealthyStartWindow {
 		initialize();
 		// 
 		this.PM = new CustomPanel(frmHealthyStart);
-		this.PM.changePanel(new LoginPanel(frmHealthyStart));
-		// this.PM.changePanel(new MainMenuPanel(frmHealthyStart));
+		this.PM.changePanel(new LoginPanel(frmHealthyStart), new User());
 	}
 
 	/**

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_71" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="database.User">
+    <void property="address">
+     <string>132 Road Pensacola 32504</string>
+    </void>
+    <void property="email">
+     <string>dumptruck@yahoo.com</string>
+    </void>
+    <void property="name">
+     <string>Mary Jane</string>
+    </void>
+    <void property="phone">
+     <string>555-1234</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="database.User">
+    <void property="address">
+     <string>5321 Street Pensacola 32514</string>
+    </void>
+    <void property="email">
+     <string>someEmail@yahoo.com</string>
+    </void>
+    <void property="name">
+     <string>Ashley Jones</string>
+    </void>
+    <void property="phone">
+     <string>555-1357</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="database.User">
+    <void property="address">
+     <string>7859 Highway Cantoment Florida 32504</string>
+    </void>
+    <void property="email">
+     <string>Iloveflowers@gmail.com</string>
+    </void>
+    <void property="name">
+     <string>Rose Abernathy</string>
+    </void>
+    <void property="phone">
+     <string>555-9634</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="database.User">
+    <void property="address">
+     <string>9875 Street Pace 32571</string>
+    </void>
+    <void property="email">
+     <string>gettingOld@hotmail.com</string>
+    </void>
+    <void property="name">
+     <string>Dana Peters</string>
+    </void>
+    <void property="phone">
+     <string>555-8927</string>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>

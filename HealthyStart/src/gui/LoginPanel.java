@@ -3,6 +3,10 @@ package gui;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+
+import database.CompleteUser;
+import database.User;
+
 import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
 import javax.swing.Action;
@@ -45,12 +49,17 @@ public class LoginPanel extends CustomPanel {
 	
 	// ActionEvent for starting Main Menu and capturing email
 	private class SwingAction extends AbstractAction {
+		private User user;
+		private CompleteUser compUser;
+		
 		public SwingAction() {
 			putValue(NAME, "Submit email address");
 		}
 		public void actionPerformed(ActionEvent e) {
 			email = txtEnterEmailHere.getText();
-			changePanel(new MainMenuPanel(mainWindow));
+			this.compUser = new CompleteUser(email);
+			this.user = compUser.getFinalProduct();
+			changePanel(new MainMenuPanel(mainWindow, user), user);
 		}
 	}
 }

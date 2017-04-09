@@ -8,15 +8,19 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+import database.User;
+
 @SuppressWarnings("serial")
 public class ContactPanel extends CustomPanel{
 	
 	private final Action action = new SwingAction();
 	private JFrame frame;
+	private User user;
 	
-	public ContactPanel(JFrame frame){
+	public ContactPanel(JFrame frame, User user){
 		super(frame);
 		this.frame = frame;
+		this.user = user;
 		JButton btnNewButton = new JButton("Return to Main Menu");
 		btnNewButton.setAction(action);
 		btnNewButton.setBounds(33, 214, 213, 29);
@@ -34,7 +38,7 @@ public class ContactPanel extends CustomPanel{
 			putValue(NAME, "Return to Main Menu");
 		}
 		public void actionPerformed(ActionEvent e) {
-			changePanel(new MainMenuPanel(frame));
+			changePanel(new MainMenuPanel(frame, user), user);
 		}
 	}
 }

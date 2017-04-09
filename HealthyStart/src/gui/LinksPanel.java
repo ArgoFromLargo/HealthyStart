@@ -17,16 +17,20 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
+import database.User;
+
 @SuppressWarnings("serial")
 public class LinksPanel extends CustomPanel{
 	
 	private final Action action = new SwingAction();
 	private final Action action_2 = new SwingAction2();
 	private JFrame frame;
+	private User user;
 	
-	public LinksPanel(JFrame frame){
+	public LinksPanel(JFrame frame, User user){
 		super(frame);
 		this.frame = frame;
+		this.user = user;
 		
 		JButton btnNewButton = new JButton("Return to Main Menu");
 		btnNewButton.setAction(action);
@@ -200,7 +204,7 @@ public class LinksPanel extends CustomPanel{
 			putValue(NAME, "Return to Main Menu");
 		}
 		public void actionPerformed(ActionEvent e) {
-			changePanel(new MainMenuPanel(frame));
+			changePanel(new MainMenuPanel(frame, user), user);
 		}
 	}
 	
@@ -210,7 +214,7 @@ public class LinksPanel extends CustomPanel{
 			putValue(NAME, "Back");
 		}
 		public void actionPerformed(ActionEvent e) {
-			changePanel(new ResourcePanel(frame));
+			changePanel(new ResourcePanel(frame, user), user);
 		}
 	}
 }

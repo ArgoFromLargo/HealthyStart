@@ -8,6 +8,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+import database.User;
+
 @SuppressWarnings("serial")
 public class ResourcePanel extends CustomPanel{
 	
@@ -16,10 +18,13 @@ public class ResourcePanel extends CustomPanel{
 	private final Action action_2 = new SwingAction_2();
 	private final Action action_3 = new SwingAction_3();
 	private JFrame frame;
+	private User user;
 	
-	public ResourcePanel(JFrame frame){
+	public ResourcePanel(JFrame frame, User user){
 		super(frame);
 		this.frame = frame;
+		this.user = user;
+		
 		JButton btnNewButton = new JButton("Return to Main Menu");
 		btnNewButton.setAction(action);
 		btnNewButton.setBounds(33, 337, 213, 29);
@@ -51,7 +56,7 @@ public class ResourcePanel extends CustomPanel{
 			putValue(NAME, "Return to Main Menu");
 		}
 		public void actionPerformed(ActionEvent e) {
-			changePanel(new MainMenuPanel(frame));
+			changePanel(new MainMenuPanel(frame, user), user);
 		}
 	}
 	
@@ -60,7 +65,7 @@ public class ResourcePanel extends CustomPanel{
 			putValue(NAME, "Links");
 		}
 		public void actionPerformed(ActionEvent e) {
-			changePanel(new LinksPanel(frame));
+			changePanel(new LinksPanel(frame, user), user);
 		}
 	}
 	
@@ -69,7 +74,7 @@ public class ResourcePanel extends CustomPanel{
 			putValue(NAME, "Purchases");
 		}
 		public void actionPerformed(ActionEvent e) {
-			changePanel(new PurchasesPanel(frame));
+			changePanel(new PurchasesPanel(frame, user), user);
 		}
 	}
 	
@@ -78,7 +83,7 @@ public class ResourcePanel extends CustomPanel{
 			putValue(NAME, "Educational");
 		}
 		public void actionPerformed(ActionEvent e) {
-			changePanel(new EducationPanel(frame));
+			changePanel(new EducationPanel(frame, user), user);
 		}
 	}
 }

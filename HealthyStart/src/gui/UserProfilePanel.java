@@ -8,14 +8,18 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+import database.User;
+
 @SuppressWarnings("serial")
 public class UserProfilePanel extends CustomPanel{
 	
 	private final Action action = new SwingAction();
 	private JFrame frame;
+	private User user;
 	
-	public UserProfilePanel(JFrame frame){
+	public UserProfilePanel(JFrame frame, User user){
 		super(frame);
+		this.user = user;
 		this.frame = frame;
 		JButton btnNewButton = new JButton("Return to Main Menu");
 		btnNewButton.setAction(action);
@@ -34,7 +38,7 @@ public class UserProfilePanel extends CustomPanel{
 			putValue(NAME, "Return to Main Menu");
 		}
 		public void actionPerformed(ActionEvent e) {
-			changePanel(new MainMenuPanel(frame));
+			changePanel(new MainMenuPanel(frame,user), user);
 		}
 	}
 }

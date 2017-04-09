@@ -9,6 +9,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+import database.User;
+
 @SuppressWarnings("serial")
 public class MainMenuPanel extends CustomPanel{
 	
@@ -17,11 +19,12 @@ public class MainMenuPanel extends CustomPanel{
 	private final Action action_2 = new SwingAction_2();
 	private final Action action_3 = new SwingAction_3();
 	private JFrame mainWindow;
-
+	private User user;
 	
-	public MainMenuPanel(JFrame frame) {
+	public MainMenuPanel(JFrame frame, User user) {
 		super(frame);
 		this.mainWindow = frame;
+		this.user = user;
 		
 		JButton btnNewButton = new JButton("View Appointment Info");
 		btnNewButton.setAction(action);
@@ -57,7 +60,7 @@ public class MainMenuPanel extends CustomPanel{
 			putValue(NAME, "View Appointment Info");
 		}
 		public void actionPerformed(ActionEvent e) {
-			changePanel(new ViewAppInfoPanel(mainWindow));
+			changePanel(new ViewAppInfoPanel(mainWindow, user), user);
 		}
 	}
 	
@@ -68,7 +71,7 @@ public class MainMenuPanel extends CustomPanel{
 			putValue(NAME, "User Profile");
 		}
 		public void actionPerformed(ActionEvent e) {
-			changePanel(new UserProfilePanel(mainWindow));
+			changePanel(new UserProfilePanel(mainWindow, user), user);
 		}
 	}
 	
@@ -79,7 +82,7 @@ public class MainMenuPanel extends CustomPanel{
 			putValue(NAME, "Resources and Information");
 		}
 		public void actionPerformed(ActionEvent e) {
-			changePanel(new ResourcePanel(mainWindow));
+			changePanel(new ResourcePanel(mainWindow, user), user);
 		}
 	}
 	
@@ -90,7 +93,7 @@ public class MainMenuPanel extends CustomPanel{
 			putValue(NAME, "Helpful Contacts");
 		}
 		public void actionPerformed(ActionEvent e) {
-			changePanel(new ContactPanel(mainWindow));
+			changePanel(new ContactPanel(mainWindow, user), user);
 		}
 	}
 	

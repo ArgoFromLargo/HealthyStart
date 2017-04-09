@@ -8,16 +8,20 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+import database.User;
+
 @SuppressWarnings("serial")
 public class EducationPanel extends CustomPanel{
 	
 	private final Action action = new SwingAction();
 	private final Action action_2 = new SwingAction2();
 	private JFrame frame;
+	private User user;
 	
-	public EducationPanel(JFrame frame){
+	public EducationPanel(JFrame frame, User user){
 		super(frame);
 		this.frame = frame;
+		this.user = user;
 		
 		JButton btnNewButton = new JButton("Return to Main Menu");
 		btnNewButton.setAction(action);
@@ -41,7 +45,7 @@ public class EducationPanel extends CustomPanel{
 			putValue(NAME, "Return to Main Menu");
 		}
 		public void actionPerformed(ActionEvent e) {
-			changePanel(new MainMenuPanel(frame));
+			changePanel(new MainMenuPanel(frame, user), user);
 		}
 	}
 	
@@ -51,7 +55,7 @@ public class EducationPanel extends CustomPanel{
 			putValue(NAME, "Back");
 		}
 		public void actionPerformed(ActionEvent e) {
-			changePanel(new ResourcePanel(frame));
+			changePanel(new ResourcePanel(frame, user), user);
 		}
 	}
 }
